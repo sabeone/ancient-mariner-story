@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>The Story of the Ancient Mariner
+</title>
+<meta charset="utf-8">
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-storydata
+{
+	display: block !important;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>The Story of the Ancient Mariner
+</h1>
+<tw-storydata name="The Story of the Ancient Mariner" startnode="15" creator="Twine" creator-version="2.3.9" ifid="CCD7829E-1804-449F-AE2C-76D4D02B6333" zoom="1" format="SugarCube" format-version="2.31.1" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html {
+  	height: 100%;
+	background-color: #FFFFFF;
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+}
+
+body {
+  background-color: transparent;
+  margin: 10% 0 0 0;
+  font-size: 100%;
+  text-align: center;
+}
+
+#passages {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 60%;
+  display: inline-block;
+  min-height: 40%;
+  margin:auto;
+  margin-bottom: 5%;
+  padding: 0px;
+}
+
+.passage {
+  margin: 0px;
+  padding: 2em;
+  color: black;
+  font-size: 100%;
+  text-align:justify;
+}
+
+a.internalLink {
+  color: darkred;
+}
+a.internalLink:hover {
+  color: orangered;
+  text-decoration: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Discovery" tags="" position="540,223.5" size="100,100">You are at an antique shop looking for a wedding gift for your oldest and dearest friend. A dusty, aged book catches your eye, so you take it from the shelf.
+
+In the dim light of the shop, the title flashes with a green glow: THEE STOREYS OF A MARINER. Your fingertips brush over the pages as you [[try to open the book|Transported]].
+</tw-passagedata><tw-passagedata pid="2" name="Transported" tags="" position="540,373.5" size="100,100">&lt;&lt;set $isCapt = -1&gt;&gt;&lt;&lt;set $isNorth = -1&gt;&gt;&lt;&lt;set $captGuilty = -1&gt;&gt;&lt;&lt;set $captNotGuilty = -1&gt;&gt;&lt;&lt;set $crewAngry = -1&gt;&gt;&lt;&lt;set $crewNotAngry = -1&gt;&gt;A gust of warm, salty wind runs through the book, opening it to a random page. You stare into the page, blinking several times before realizing you are no longer in the store - you are in the book!
+
+You materialize onto a huge ship as a...
+	[[Captain|Set Sail][$isCapt = 1]]
+	[[Crew member|Set Sail][$isCapt = 0]]
+</tw-passagedata><tw-passagedata pid="3" name="Set Sail" tags="" position="540,523.5" size="100,100">You sail with 200 others. The mood on the ship is bolstered by the warmth of the sun and glittering swells of the ocean. After three days calm, the weather [[takes a bad turn|Steer]].</tw-passagedata><tw-passagedata pid="4" name="Steer" tags="" position="540,673.5" size="100,100">The storm batters the ship, driving it off course. &lt;&lt;if $isCapt is "yes"&gt;&gt;After carefully considering your map, you decide to steer the ship:&lt;&lt;else&gt;&gt;Your background in navigation helps the Captain decide to steer the ship:
+&lt;&lt;endif&gt;&gt;
+	[[North|Stuck][$isNorth = 1]]
+	[[South|Stuck][$isNorth = 0]]</tw-passagedata><tw-passagedata pid="5" name="Stuck" tags="" position="540,823.5" size="100,100">The stormy weather makes it hard to see, but everyone hears &lt;&lt;if $isNorth is 1&gt;&gt;the sharp crack of the ship grinding to a halt against solid ice. &lt;&lt;elseif $isNorth is 0&gt;&gt;the dull crunch of the ship running aground a coral reef. &lt;&lt;endif&gt;&gt;After a few moments of uncertainty, someone shouts and points to the sky. You [[look up|Albatross Appears]].</tw-passagedata><tw-passagedata pid="6" name="Albatross Appears" tags="" position="540,973.5" size="100,100">You seen an Albatross fly around the ship, a soft white figure cutting through the angry, grey clouds. As it swoops through the sky, &lt;&lt;if $isNorth is 1&gt;&gt;the ice breaks apart &lt;&lt;elseif $isNorth is 0&gt;&gt;the coral breaks down &lt;&lt;endif&gt;&gt;, creating a path for the ship to sail through.
+
+&lt;&lt;if $isCapt is 1&gt;&gt;Despite being freed, [[you are frustrated|Albatross Shot]] by the misfortune occuring so early in the journey you are leading.&lt;&lt;elseif $isCapt is 0&gt;&gt;Despite the Captain's aggravated expression, [[you feel grateful|Albatross Shot]], taking the Albatross as a sign of good fortune and smooth sailing for the rest of the journey.
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Albatross Shot" tags="" position="540,1123.5" size="100,100">&lt;&lt;if $isCapt is 1&gt;&gt;As the Albatross circles the ship, you impulsively decide to take your frustrations out on the bird. You slip your gun out of its holster and shoot the bird, the crew watching in stunned silence as its lifeless body plummets to the deck with a heavy thud.
+&lt;&lt;elseif $isCapt is 0&gt;&gt;As you watch the Albatross circle the ship, you hear a thunderous bang! The bird's lifeless body slams into the deck with a heavy thud. You and the other crew members look at the Captain, who is holstering a gun.
+&lt;&lt;endif&gt;&gt;
+Immediately, the clouds and fog and general darkness begin to clear up. The sun's rays warm you once again and the returns to a gentle state. You feel:
+&lt;&lt;if $isCapt is 1&gt;&gt;
+	[[Guilty for taking the life|Cursed][$captGuilty = 1]]
+	[[Satisfied that your action worked out|Cursed][$captNotGuilty = 1]]&lt;&lt;elseif $isCapt is 0&gt;&gt;
+	[[Angry over the senseless act of violence|Cursed][$crewAngry = 1]]
+	[[Confident that the Captain did the right thing|Cursed][$crewNotAngry = 1]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Cursed" tags="" position="540,1273.5" size="100,100">After a few hours of sailing, the ship drifts into dead waters, trapping you again. You squint into the sparkling water, hearing cries of fear as the ocean begins to thicken and rotting creatures, shiny with ancient slime, emerge from its depths, slithering across the congealed surface. As the sun sets, the ocean appears to burn with unholy green flames.
+
+You fear the killing of the Albatross doomed the ship...
+
+&lt;&lt;if $captGuilty is 1&gt;&gt;In your guilt, you begin to [[pray over the carcass|Sails Sighted]].&lt;&lt;elseif $captNotGuilty is 1&gt;&gt;But you refuse to be cowed by ghosts! You [[throw the carcass overboard|Sails Sighted]].&lt;&lt;elseif $crewAngry is 1&gt;&gt;Furious, you and two other sailors [[hang the carcass around the Captain's neck|Sails Sighted]] to shame him.&lt;&lt;elseif $crewNotAngry is 1&gt;&gt;You decide to [[burn the carcass|Sails Sighted]], hoping to break the curse.
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Sails Sighted" tags="" position="540,1423.5" size="100,100">After two days with no water to drink and no fish to eat, everyone is weak - motionless, speechless. On the third morning, you manage to open one eye and notice a sail on the horizon. You can only [[hope|Ghost Ship]] that you are about to be saved...</tw-passagedata><tw-passagedata pid="10" name="Ghost Ship" tags="" position="540,1573.5" size="100,100">The next time you manage to open your eyes, a skeletal ghost ship looms beside yours. Its only crew are Death and Life-in-Death. You [[watch pathetically|Game Outcome]] as the cloaked figures play a game of dice...
+
+&lt;&lt;set $gameWinner to either("death", "life")&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Game Outcome" tags="" position="540,1723.5" size="100,100">&lt;&lt;if $gameWinner is "death"&gt;&gt;Death wins the game. He grins lifelessly as his bony finger points at you. As he raises his hand, you realize water is seeping into the boat from everywhere, getting higher and higher until [[you are totally submerged|Return]].&lt;&lt;else&gt;&gt;Life-in-Death wins the game. Her bloody lips contort to whistle three times and the day fades into night.
+&lt;&lt;if $captGuilty is 1&gt;&gt;
+Life-in-Death announces that she will spare your life, but only if you sacrifice another sailor to restore the balance you disturbed.
+
+"No," you say. "I shot the innocent Albatross and my crew has suffered enough for it. If you let them return home, [[I surrender my life|Final Act]]."&lt;&lt;elseif $captNotGuilty is 1&gt;&gt;Life-in-Death says, "You feel no remorse for taking an innocent life. You care not for your sailors, so I will care for them instead." You try to yell out that you do care, but the [[words die in your throat|Final Act]] under her awful glare.&lt;&lt;else&gt;&gt;Life-in-Death waves her gnarled hand at the ship and you [[watch in terror|Final Act]] as your fellow sailors begin to tumble overboard.
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Return" tags="" position="540,1873.5" size="100,100">Suddenly, everything around you fades away and you realize you are back in the shop, the book closed in your tight grip. Despite your fright, overwhelming curiosity gets the better of you. 
+
+What else lies hidden in this magical book? You decide to:
+	[[Try opening the book again|Transported]]
+	[[Buy the book|End]] and find another present for your friend.
+
+</tw-passagedata><tw-passagedata pid="13" name="Final Act" tags="" position="420,1873.5" size="100,100">&lt;&lt;if $captGuilty is 1&gt;&gt;Life-in-Death dips her head. Your crew looks at you with respect and sorrow as you [[collapse to the floor|Return]].
+&lt;&lt;elseif $captNotGuilty is 1&gt;&gt;One by one, each of your sailors drops dead, their curses and pleading eventually silenced. As the ghost ship sails away with their souls, Life-in-Death's voice whispers in your ear, "[[Do not let this lesson be in vain|Return]]."&lt;&lt;elseif $crewAngry is 1&gt;&gt;When the Captain finally dies, you realize that you and the sailors who hung the Albatross around the Captain's neck had been spared. As the ghost ship sails away with their souls, you [[make a silent vow|Return]] to Life-in-Death to never take any life for granted.&lt;&lt;elseif $crewNotAngry is 1&gt;&gt;You curse the Captain for his evil deed and yourself for condoning it. You [[die with hatred in your heart|Return]].
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="End" tags="" position="540,2023.5" size="100,100">The End!</tw-passagedata><tw-passagedata pid="15" name="Title" tags="" position="540,84.5" size="100,100">[[The Story of the Ancient Mariner|Discovery]]
+
+Adapted by Sabrina Wilson
+from Samuel Coleridge's Rime of the Ancient Mariner</tw-passagedata></tw-storydata>
+
+
+
+
+</body></html>
